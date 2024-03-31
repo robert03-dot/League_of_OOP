@@ -1,2 +1,3 @@
-package PACKAGE_NAME;public enum Map {
+public enum Map {
+    Land, Volcanic, Desert, Woods
 }
