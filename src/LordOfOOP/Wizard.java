@@ -1,4 +1,9 @@
+package LordOfOOP;
+
 public class Wizard extends Abilities{
+    public Wizard(int x, int y) {
+    }
+
     public void update(int HP){
         super.update(400);
         if(super.levelUp()>super.getCurrentLevel()){

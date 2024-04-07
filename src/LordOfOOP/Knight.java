@@ -1,4 +1,9 @@
+package LordOfOOP;
+
 public class Knight extends Abilities{
+    public Knight(int x, int y) {
+    }
+
     public void update(int HP){
         super.update(900);
         if(super.levelUp()>super.getCurrentLevel()){
@@ -12,11 +17,7 @@ public class Knight extends Abilities{
         if(super.levelUp()>super.getCurrentLevel()){
             setSlam(getDamage()+40);
         }
+
     }
-    public void knightHome(Knight knight,Map map){
-        if(map == Map.Land){
-            knight.setExecute(knight.getDamage()+15);
-            knight.setSlam(knight.getDamage()+15);
-        }
-    }
+
 }

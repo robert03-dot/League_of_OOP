@@ -1,4 +1,26 @@
+package LordOfOOP;
+
+import java.util.Random;
+
 public class Pyromancer extends Abilities{
+    public Pyromancer(int x, int y) {
+    }
+
+    public void pyromancerHome(Pyromancer pyromancer, int mapWidth, int mapHeight) {
+        // Create a random number generator
+        Random random = new Random();
+
+        // Generate random x and y coordinates within the map boundaries
+        int x = random.nextInt(mapWidth);
+        int y = random.nextInt(mapHeight);
+
+        // Set the Pyromancer's coordinates
+        pyromancer.setX(x);
+        pyromancer.setY(y);
+    }
+    public Pyromancer createPyromancer(int x, int y) {
+        return new Pyromancer(x,y);
+    }
     public void update(int HP) {
         super.update(500);
         if (super.levelUp() > super.getCurrentLevel()) {

@@ -1,3 +1,5 @@
+package LordOfOOP;
+
 public class Abilities extends Heroes{
     private int HP;
     private int damage;
@@ -16,33 +18,52 @@ public class Abilities extends Heroes{
 
     public Abilities() {
         super();
+        this.HP = 100; // Default starting HP
+        this.maxHP = calculateMaxHP();
+    }
+    public Knight createKnight(int x, int y) {
+        return new Knight(x, y);
+    }
+    public Pyromancer createPyromancer(int x,int y){
+        return new Pyromancer(x,y);
+    }
+    public Rogue createRogue(int x, int y) {
+        return new Rogue(x, y);
     }
 
-    public void Abilities(int HP, int damage){
-        this.HP = HP;
-        this.damage = damage;
+    public Wizard createWizard(int x, int y) {
+        return new Wizard(x, y);
     }
+    private int calculateMaxHP() {
+        // Example formula: maxHP = baseHP + (level * multiplier)
+        int baseHP = 100; // Example base HP
+        double multiplier = 10; // Example multiplier
+        return baseHP + (getCurrentLevel() * (int) multiplier);
+    }
+
+
     public void update(int HP){
         this.HP += HP;
     }
     public void damage(int damageAmount) {
         this.HP -= damageAmount;
-        // Additional logic if needed
     }
     public int getHP() {
         return HP;
     }
 
-    public void setHP(int HP) {
+    public int setHP(int HP) {
         this.HP = HP;
+        return HP;
     }
 
     public int getDamage() {
         return damage;
     }
 
-    public void setDamage(int damage) {
+    public int setDamage(int damage) {
         this.damage = damage;
+        return damage;
     }
 
     public int getFireblast() {
@@ -82,7 +103,7 @@ public class Abilities extends Heroes{
     }
 
     public void setDrain(double drain) {
-        this.drain = drain;
+        this.drain = (int) drain;
     }
 
     public int getDeflect() {
@@ -90,7 +111,7 @@ public class Abilities extends Heroes{
     }
 
     public void setDeflect(double deflect) {
-        this.deflect = deflect;
+        this.deflect = (int) deflect;
     }
 
     public int getBackstab() {

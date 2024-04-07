@@ -1,4 +1,9 @@
+package LordOfOOP;
+
 public class Rogue extends Abilities{
+    public Rogue(int x, int y) {
+    }
+
     public void update(int HP){
         super.update(600);
         if(super.levelUp()>super.getCurrentLevel()){
