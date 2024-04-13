@@ -12,7 +12,7 @@ public class Angels extends Abilities {
     private int theDoomer;
     private int xpAngel;
 
-    public Angels() {
+    public Angels(int round, String angelType, int x, int y) {
     }
     private int round;
     private String type;

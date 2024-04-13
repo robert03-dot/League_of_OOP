@@ -2,6 +2,8 @@ package LordOfOOP;
 
 public class LordOfOOP extends Abilities {
     private static LordOfOOP instance;
+    private int round;
+    private String angelType;
 
     LordOfOOP(){
 
@@ -24,7 +26,7 @@ public class LordOfOOP extends Abilities {
         return instanceForAngels;
     }
     public Angels createAngels(){
-        Angels angels = new Angels();
+        Angels angels = new Angels(round, angelType, X, Y);
         return angels;
     }
     public void KnightAttackCombat(Pyromancer pyromancer, Knight knight, Wizard wizard, Rogue rogue, Map map, Abilities abilities) {
